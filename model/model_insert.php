@@ -1,24 +1,38 @@
+<? session_start()?>
 <?php
-
-	require_once('http://localhost/tp1_php5/model/modelle.php');
 	
-	 try {
-                    
-                    $stmt->bindParam(':nom', $nom);
+	require_once('modelle.php');
+
+ 			 try {
+                   
+                    // prepare sql and bind parameters
+                    $stmt = $conn->prepare("INSERT INTO client (nom, prenom, date, genre, telephone, mail)
+                    VALUES (:nom, :prenom, :date, :genre, :telephone, :mail)");
+                   
+					$stmt->bindParam(':nom', $nom);
                     $stmt->bindParam(':prenom', $prenom);
-                    $stmt->bindParam(':mail', $mail);
+					$stmt->bindParam(':date', $date);
+					$stmt->bindParam(':genre', $genre);
+					$stmt->bindParam(':telephone', $telephone);
+					$stmt->bindParam(':mail', $mail);
+
 
                     // insert a row
                     $nom = $client['nom'];
                     $prenom = $client['prenom'];
+					$date = $client['date'];
+					$genre = $client['genre'];
+					$telephone = $client['telephone'];	
                     $mail = $client['mail'];
+	
                     $stmt->execute();
                     
-                  echo "New records created successfully";
+
                   }
               catch(PDOException $e)
                   {
                   echo "Error: " . $e->getMessage();
                   }
               $conn = null;
+	
  ?>

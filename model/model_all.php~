@@ -1,6 +1,11 @@
 <?php
 
-	require_once('http://localhost/tp1_php5/model/modelle.php');
-	$client = $clients -> execute();
+		include('modelle.php');
+
+		$conn = $conn -> prepare( "select * from client" );
+		$STH -> execute();
+
+		$result = $STH -> fetchAll();
+	
 
 ?>

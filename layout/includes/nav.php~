@@ -1,3 +1,4 @@
+<? session_start()?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
@@ -13,7 +14,7 @@
 			  <ul class="nav navbar-nav">
      				<li class="active"><a href="http://localhost/tp1_php5/">Accueil</a></li>
       				<li><a href="#" data-toggle="modal" data-target="#myModal">Ajouter Client</a></li>
-      				<li><a href="">Afficher Client</a></li>
+      				<li><a href="http://localhost/tp1_php5/controle/ctrl.php?action=all">Afficher Client</a></li>
       				<li><a href="#">A propos de nous!</a></li>
     			</ul>
 

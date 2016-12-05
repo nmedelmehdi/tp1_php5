@@ -1,5 +1,5 @@
+<? session_start()?>
 
-<a href="../controle/ctrl.php?action=add">ici</a>
 <form name="myForm" method="POST" action="../controle/ctrl.php?action=add">
 				
 

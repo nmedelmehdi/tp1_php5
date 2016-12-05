@@ -1,4 +1,4 @@
-
+<? session_start()?>
 
 <form name="myForm" method="POST" action="../controle/ctrl.php?action=add">
 				
