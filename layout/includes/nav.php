@@ -1,3 +1,4 @@
+<?php session_start();?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
@@ -19,14 +20,19 @@
 
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
-                    <form class="navbar-form navbar-right" role="form">
-                        <div class="form-group">
-                            <input type="text" placeholder="Email" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" placeholder="Password" class="form-control">
-                        </div>
-                        <button type="submit" class="btn btn-success">Sign in</button>
+                    <form method="post"class="navbar-form navbar-right" role="form" action="ctrl.php?action=deconnexion">
+                        <label style="color : white" name="usernamer">Bienvenue : <?php echo $_SESSION['username']?></label><input type=submit name="destroy" class="btn btn-danger" value="Deconnexion"/>
+	
+
+							<?php
+								
+							
+								if(isset($_POST['destroy']))
+								{
+										session_destroy();
+								}
+							
+							?>
                     </form>
                 </div><!--/.navbar-collapse -->
             </div>

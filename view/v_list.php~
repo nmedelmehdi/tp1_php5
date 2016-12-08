@@ -1,7 +1,6 @@
-<? session_start()?>
+<?php session_start();?>
 <!DOCTYPE html>
-<html lang ="en"/>
-<html>
+<html lang ="en">
 	<head>
 	<title>v_all</title>
   	<?php include('../layout/includes/cdn_boutstrap.php'); ?>
@@ -32,13 +31,7 @@
                 </style>
 	</head>
 	<body>
-		<!DOCTYPE html>
-<html>
-
-<body>
-
-	
-		<!-- nav -->
+	<!-- nav -->
         <div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -69,7 +62,8 @@
 				    <div class="container" align="center">
 				        <?php include '../layout/includes/carousel.php'?>
 				    </div>
-				</div>	
+				</div>
+<a href="../controle/ctrl.php?action=login">session : <?php echo "seion :".$_SESSION['username'] ?></a>
 			<div style="overflow-x:auto;">
 			
 		             <?php
@@ -160,7 +154,7 @@
 											
 <td>
 	
-		<a href='../view/apercu.php?num=".$row["num"]."' data-toggle='modal' data-target='#apercu'>
+		<a href='../controle/ctrl.php?action=apercu&num=".$row["num"]."' data-toggle='modal' data-target='#apercu'>
 			<img title='Aperçu' style = 'width : 20px ; height : 20px' src='../layout/images/apercu.png'>
 		</a>
 	
@@ -183,17 +177,9 @@
                 
 				</div>
 				
-		</div>
-	</div>		
+			</div>
+		</div>		
 	
-
-	
- 
-
-</body>
-</html>
-
-		
 	</body>
 </html>
 

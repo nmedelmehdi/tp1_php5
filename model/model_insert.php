@@ -20,7 +20,7 @@
                     // insert a row
                     $nom = $client['nom'];
                     $prenom = $client['prenom'];
-					$date = $client['date'];
+					$date = date('Y-m-d',strtotime($client['date']));
 					$genre = $client['genre'];
 					$telephone = $client['telephone'];	
                     $mail = $client['mail'];

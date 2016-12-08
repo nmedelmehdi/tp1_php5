@@ -1,0 +1,4 @@
+<?php 
+
+echo $switch01;
+?>

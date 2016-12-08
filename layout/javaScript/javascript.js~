@@ -5,10 +5,4 @@ function modif()
 	
 }
 
-function clicked() {
-       if (confirm('Confirmer Votre Suppression!!?')) {
-           ok.submit();
-       } else {
-           return false;
-       }
-}
+

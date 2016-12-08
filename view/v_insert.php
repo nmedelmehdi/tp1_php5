@@ -1,21 +1,3 @@
-<? session_start()?>
-<!DOCTYPE html>
-<html>
-	<head>
-	<meta charset="UTF_16"/>
-
-	    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	    <script>
-	    $( function() {
-		  $( "#datepicker" ).datepicker();
-	    } );
-	   </script>
-	</head>
-	<body>
-	
-
 		<div class="modal-dialog">
 		
 			  <!-- Modal content-->
@@ -31,7 +13,7 @@
                     forma.action += "?action=add" ;
                 }
 				  </script>
-					<form name="myForm" id="myForm" method="POST" action="<?php echo htmlentities($_SERVER['PHP_SELF'])."/../controle/ctrl.php?action=add" ?>" onsubmit="changeUrlAction()">
+					<form name="myForm" id="myForm" method="POST" action="<?php echo htmlentities($_SERVER['PHP_SELF'])."/../ctrl.php?action=add" ?>" onsubmit="changeUrlAction()">
 				
 
 						<table class="table-condensed table-striped">
@@ -87,7 +69,4 @@
 			  </div>
 			  
 			</div>
-    
-	</body>
-</html>
 

@@ -8,9 +8,4 @@
     $num = $_GET['num'];
     $sql->execute();
 
-
-	
-	include('/view/v_list.php')
-	 
-
 ?>

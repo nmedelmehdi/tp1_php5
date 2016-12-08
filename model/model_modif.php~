@@ -37,6 +37,8 @@ $sql = $conn -> prepare("UPDATE `crm`.`client` SET `genre` = :genre, `nom` = :no
 	$nom = $client['nom'];
 	$date = $client['date'];
 	$genre = $client['genre'];
+	$mail = $client['mail'];
+	$telephone = $client['telephone'];
 	$num = $_GET['num'];
 
     $sql->execute();

@@ -2,7 +2,7 @@
 
 		include('modelle.php');
 
-		$conn = $conn -> prepare( "select * from client" );
+		$STH = $conn -> prepare( "select * from client" );
 		$STH -> execute();
 
 		$result = $STH -> fetchAll();

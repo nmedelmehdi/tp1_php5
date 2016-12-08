@@ -1,9 +1,15 @@
-<? session_start()?>
+<?php session_start(); ?>
 <?php
-  
-  $action = "add";
-  $action = $_GET['action'] ;
 
+
+  if(isset($_SESSION['username']))
+	{
+		$action = "all";
+	}
+	else 
+	{
+		$action = "login";
+	}
 
 
 	switch ($action)
@@ -29,8 +35,12 @@
 			
 		break;
 	
-		case 'vadd':
-			include('view/v_insert.php');
+
+
+		case 'apercu':
+			
+			include_once('../model/model_apercu.php');
+			include('../view/apercu.php');
 		break;
 
 		case 'add':
@@ -43,6 +53,33 @@
 			
 		break; 
 	
+		case 'login':
+			
+			include('../view/login.php');
+			
+		break;
+		
+		case 'verif':
+			
+			require('../model/model_verif.php');
+			if($nombre == 1) 
+				{
+					header('Location: http://localhost/tp1_php5/controle/ctrl.php?action=all');
+				}
+			else 
+				{
+					header('Location: http://localhost/tp1_php5/');
+				}
+				
+		break;
+
+		case 'deconnexion':
+			require('../model/model_decx.php');
+			header('Location: http://localhost/tp1_php5/');
+			
+		break;
+		
+
 		default:
 			# code...
 		break;
