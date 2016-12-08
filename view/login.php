@@ -10,19 +10,19 @@
 	</head>
 	<body>
 		<div class="container" align="center">
-			<div class="panel panel-default" style="width:50%">
+			<div class="panel panel-primary" style="width:50%">
 				<div class="panel-heading">Login Page</div>
-				<form name=any method=post action=ctrl.php?action=verif>
+				<form name=any method=post  action=ctrl.php>
 				
-						<div class="form-group">
+						<div class="form-group" align="left">
 							<label name="usernamer">Nom : </label>
-							<input class="form-control"  type="text" name="username" placeholder="Entrer Votre Nom " required  style="width: 50%"/><br/>
+							<input class="form-control"  type="text" name="username" placeholder="Entrer Votre Nom " required  /><br/>
 						
-						<div class="form-group">
+						<div class="form-group" align="left">
 							<label name="password">Mot de Pass : </label>
-							<input class="form-control"  type="password" name="username" placeholder="Entrer Votre Mot de Pass" required style="width: 50%"/><br/>			
+							<input class="form-control"  type="password" name="password" placeholder="Entrer Votre Mot de Pass" required /><br/>			
 						</div>
-						<div class="form-group">
+						<div class="form-group" align="left">
 							<input class="btn btn-primary"  type="submit" name="login" Value="Login">
 						</div>
 				</form>

@@ -2,7 +2,7 @@
 		
 		require_once('modelle.php');
 		
-		$queryAuth = $conn-> prepare('SELECT count( username )
+		$queryAuth = $conn-> prepare('SELECT count( username ) as res
 FROM `user`
 WHERE `username` = :username
 AND `password` = :password');

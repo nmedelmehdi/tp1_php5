@@ -1,7 +1,5 @@
 <?php session_start(); ?>
 <?php
-
-
   if(isset($_SESSION['username']))
 	{
 		$action = "all";
@@ -10,15 +8,23 @@
 	{
 		$action = "login";
 	}
-
-
+	
 	switch ($action)
 	{
 		case 'all':
-          
-		require('../model/model_all.php');
+        require('../model/model_verif.php'); 
+		if($nombre == 1) 
+				{
+					require('../model/model_all.php');
 
-		 include ('../view/v_list.php');
+					include ('../view/v_list.php');
+				}
+			else 
+				{
+					session_destroy();
+					header('Location: http://localhost/tp1_php5/controle/ctrl.php?action=login');
+				} 
+
 		break;
 
 		case 'modif':
@@ -55,23 +61,11 @@
 	
 		case 'login':
 			
-			include('view/login.php');
+			include('../view/login.php');
 			
 		break;
 		
-		case 'verif':
-			
-			require('../model/model_verif.php');
-			if($nombre == 1) 
-				{
-					header('Location: http://localhost/tp1_php5/controle/ctrl.php?action=all');
-				}
-			else 
-				{
-					header('Location: http://localhost/tp1_php5/');
-				}
-				
-		break;
+
 
 		case 'deconnexion':
 			require('../model/model_decx.php');
