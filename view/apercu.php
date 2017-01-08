@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html>
-	<head>
-	<meta charset="UTF_16"/>
-
-	    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	  
-	</head>
-	<body>
-	
-
 		<div class="modal-dialog">
 		
 			  <!-- Modal content-->
@@ -54,7 +42,5 @@
 			  </div>
 			  
 			</div>
-    
-	</body>
-</html>
+
 

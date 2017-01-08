@@ -22,17 +22,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <form method="post"class="navbar-form navbar-right" role="form" action="ctrl.php?action=deconnexion">
                         <label style="color : white" name="usernamer">Bienvenue : <?php echo $_SESSION['username']?></label><input type=submit name="destroy" class="btn btn-danger" value="Deconnexion"/>
-	
 
-							<?php
-								
-							
-								if(isset($_POST['destroy']))
-								{
-										session_destroy();
-								}
-							
-							?>
                     </form>
                 </div><!--/.navbar-collapse -->
             </div>

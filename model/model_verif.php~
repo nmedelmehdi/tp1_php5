@@ -1,6 +1,6 @@
 <?php include('model_auth.php');
 	
-	$switch01 = $queryAuth->fetchAll();
+	$switch01 = $queryAuth->fetch();
 	$nombre;
 	foreach($switch01 as $result)
 

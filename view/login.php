@@ -27,12 +27,6 @@
 						</div>
 				</form>
 
-				<?php 
-					if(isset($_POST['login']))
-						{
-							$_SESSION['username'] = $_POST['username'];
-						}
-				?>
 			</div>
 		</div>
 	</body>

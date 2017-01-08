@@ -38,7 +38,7 @@
 								</tr>
 								<tr>
 									<td>Date</td>
-									<td><input type="text" name="date" id="datepicker"/></td>
+									<td><input type="text" id="datepicker" name="date" id="datepicker"/></td>
 								</tr>
 								
 								<tr>

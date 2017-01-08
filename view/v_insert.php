@@ -38,9 +38,13 @@
 								</tr>
 								<tr>
 									<td>Date</td>
-									<td><input type="text" name="date" id="datepicker"/></td>
+									<td><input type="text" id="datepicker" name="date" id="datepicker"/></td>
 								</tr>
-								
+								<script>
+								  $( function() {
+									$( "#datepicker" ).datepicker();
+								  } );
+								  </script>
 								<tr>
 									<td>Telephone</td>
 									<td><input type="text" name="telephone" placeholder="Ex : +212606204057" value=""/></td>
